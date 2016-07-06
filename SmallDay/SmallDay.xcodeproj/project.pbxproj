@@ -13,6 +13,9 @@
 		A25DC85A1D2CC8A2003521D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A25DC8591D2CC8A2003521D7 /* Assets.xcassets */; };
 		A25DC85D1D2CC8A2003521D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A25DC85B1D2CC8A2003521D7 /* LaunchScreen.storyboard */; };
 		A25DC86F1D2CCFED003521D7 /* SJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25DC86E1D2CCFED003521D7 /* SJTabBarController.m */; };
+		A2E68CE51D2D436100171E38 /* SJNewFeatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E68CE41D2D436100171E38 /* SJNewFeatureViewController.m */; };
+		A2E68CEB1D2D4E8000171E38 /* SJSJNewFeatureBut.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E68CEA1D2D4E8000171E38 /* SJSJNewFeatureBut.m */; };
+		A2E68CF01D2D501100171E38 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E68CEF1D2D501100171E38 /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		A25DC8641D2CCB58003521D7 /* SmallDay.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SmallDay.pch; path = ../../SmallDay.pch; sourceTree = "<group>"; };
 		A25DC86D1D2CCFED003521D7 /* SJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJTabBarController.h; sourceTree = "<group>"; };
 		A25DC86E1D2CCFED003521D7 /* SJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJTabBarController.m; sourceTree = "<group>"; };
+		A2E68CE31D2D436100171E38 /* SJNewFeatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJNewFeatureViewController.h; sourceTree = "<group>"; };
+		A2E68CE41D2D436100171E38 /* SJNewFeatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJNewFeatureViewController.m; sourceTree = "<group>"; };
+		A2E68CE91D2D4E8000171E38 /* SJSJNewFeatureBut.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJSJNewFeatureBut.h; sourceTree = "<group>"; };
+		A2E68CEA1D2D4E8000171E38 /* SJSJNewFeatureBut.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJSJNewFeatureBut.m; sourceTree = "<group>"; };
+		A2E68CEE1D2D501100171E38 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
+		A2E68CEF1D2D501100171E38 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +93,7 @@
 		A25DC8651D2CCD76003521D7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A2E68CDC1D2D42EC00171E38 /* Newfeature(新特性) */,
 				A25DC86C1D2CCD76003521D7 /* Tool(业务工具类) */,
 				A25DC8661D2CCD76003521D7 /* Main */,
 				A25DC86A1D2CCD76003521D7 /* Other */,
@@ -136,6 +146,8 @@
 		A25DC86B1D2CCD76003521D7 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				A2E68CEE1D2D501100171E38 /* UIView+Frame.h */,
+				A2E68CEF1D2D501100171E38 /* UIView+Frame.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -145,6 +157,41 @@
 			children = (
 			);
 			path = "Tool(业务工具类)";
+			sourceTree = "<group>";
+		};
+		A2E68CDC1D2D42EC00171E38 /* Newfeature(新特性) */ = {
+			isa = PBXGroup;
+			children = (
+				A2E68CDD1D2D42EC00171E38 /* Controller */,
+				A2E68CE01D2D42EC00171E38 /* Modle */,
+				A2E68CE11D2D42EC00171E38 /* View */,
+			);
+			path = "Newfeature(新特性)";
+			sourceTree = "<group>";
+		};
+		A2E68CDD1D2D42EC00171E38 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A2E68CE31D2D436100171E38 /* SJNewFeatureViewController.h */,
+				A2E68CE41D2D436100171E38 /* SJNewFeatureViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A2E68CE01D2D42EC00171E38 /* Modle */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modle;
+			sourceTree = "<group>";
+		};
+		A2E68CE11D2D42EC00171E38 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2E68CE91D2D4E8000171E38 /* SJSJNewFeatureBut.h */,
+				A2E68CEA1D2D4E8000171E38 /* SJSJNewFeatureBut.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,8 +267,11 @@
 			files = (
 				A25DC86F1D2CCFED003521D7 /* SJTabBarController.m in Sources */,
 				A25DC8551D2CC8A2003521D7 /* ViewController.m in Sources */,
+				A2E68CE51D2D436100171E38 /* SJNewFeatureViewController.m in Sources */,
+				A2E68CF01D2D501100171E38 /* UIView+Frame.m in Sources */,
 				A25DC8521D2CC8A2003521D7 /* AppDelegate.m in Sources */,
 				A25DC84F1D2CC8A2003521D7 /* main.m in Sources */,
+				A2E68CEB1D2D4E8000171E38 /* SJSJNewFeatureBut.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +420,7 @@
 				A25DC8631D2CC8A2003521D7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

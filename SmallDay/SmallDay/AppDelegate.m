@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "SJTabBarController.h"
+#import "SJNewFeatureViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -28,7 +30,7 @@
     
     self.window = [[UIWindow alloc]initWithFrame:SJscreenBounds];
     
-    ViewController *vc = [[ViewController alloc]init];
+    SJNewFeatureViewController *vc = [[SJNewFeatureViewController alloc]init];
     self.window.rootViewController = vc;
     
     [self.window makeKeyAndVisible];
