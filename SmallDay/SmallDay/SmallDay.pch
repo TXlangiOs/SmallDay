@@ -1,0 +1,19 @@
+//
+//  SmallDay.pch
+//  SmallDay
+//
+//  Created by Vision on 16/7/6.
+//  Copyright © 2016年 Vision. All rights reserved.
+//
+
+#ifdef __OBJC__
+#define SJscreenW [UIScreen mainScreen].bounds.size.width
+#define SJscreenH [UIScreen mainScreen].bounds.size.height
+#define SJscreenBounds [UIScreen mainScreen].bounds
+
+#ifdef DEBUG
+#define XMGLog(...)   NSLog(__VA_ARGS__)
+#else
+#define XMGLog(...)
+#endif
+#endif
