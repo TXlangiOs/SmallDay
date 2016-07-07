@@ -11,6 +11,7 @@
 #define SJscreenH [UIScreen mainScreen].bounds.size.height
 #define SJscreenBounds [UIScreen mainScreen].bounds
 #import "UIView+Frame.h"
+#import "UIImage+Image.h"
 #ifdef DEBUG
 #define XMGLog(...)   NSLog(__VA_ARGS__)
 #else
