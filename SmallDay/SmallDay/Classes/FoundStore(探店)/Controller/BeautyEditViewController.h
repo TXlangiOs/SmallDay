@@ -1,5 +1,5 @@
 //
-//  SJFoundStoreViewController.h
+//  BeautyEditViewController.h
 //  SmallDay
 //
 //  Created by Vision on 16/7/7.
@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SJBasicViewController.h"
-@interface SJFoundStoreViewController : SJBasicViewController
+
+@interface BeautyEditViewController : UITableViewController
 
 @end

@@ -23,6 +23,11 @@
 		A26442701D2DF01E00DBE309 /* SJMineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A264426F1D2DF01E00DBE309 /* SJMineViewController.m */; };
 		A26442731D2DF47D00DBE309 /* UIImage+Image.m in Sources */ = {isa = PBXBuildFile; fileRef = A26442721D2DF47D00DBE309 /* UIImage+Image.m */; };
 		A26442761D2DFA9700DBE309 /* SJCenterTitleBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = A26442751D2DFA9700DBE309 /* SJCenterTitleBtn.m */; };
+		A26442791D2E1F6E00DBE309 /* BeautySkyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A26442781D2E1F6E00DBE309 /* BeautySkyViewController.m */; };
+		A264427C1D2E1FC000DBE309 /* BeautyEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A264427B1D2E1FC000DBE309 /* BeautyEditViewController.m */; };
+		A26442811D2E456200DBE309 /* SJBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A26442801D2E456200DBE309 /* SJBasicViewController.m */; };
+		A26442851D2E580D00DBE309 /* SJChooseCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A26442841D2E580D00DBE309 /* SJChooseCityViewController.m */; };
+		A26442881D2EAAC400DBE309 /* CityHeadCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A26442871D2EAAC400DBE309 /* CityHeadCollectionReusableView.m */; };
 		A2E68CF01D2D501100171E38 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E68CEF1D2D501100171E38 /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +64,16 @@
 		A26442721D2DF47D00DBE309 /* UIImage+Image.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Image.m"; sourceTree = "<group>"; };
 		A26442741D2DFA9700DBE309 /* SJCenterTitleBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJCenterTitleBtn.h; sourceTree = "<group>"; };
 		A26442751D2DFA9700DBE309 /* SJCenterTitleBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJCenterTitleBtn.m; sourceTree = "<group>"; };
+		A26442771D2E1F6E00DBE309 /* BeautySkyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeautySkyViewController.h; path = ../BeautySkyViewController.h; sourceTree = "<group>"; };
+		A26442781D2E1F6E00DBE309 /* BeautySkyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeautySkyViewController.m; path = ../BeautySkyViewController.m; sourceTree = "<group>"; };
+		A264427A1D2E1FC000DBE309 /* BeautyEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeautyEditViewController.h; path = ../BeautyEditViewController.h; sourceTree = "<group>"; };
+		A264427B1D2E1FC000DBE309 /* BeautyEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeautyEditViewController.m; path = ../BeautyEditViewController.m; sourceTree = "<group>"; };
+		A264427F1D2E456200DBE309 /* SJBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJBasicViewController.h; sourceTree = "<group>"; };
+		A26442801D2E456200DBE309 /* SJBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJBasicViewController.m; sourceTree = "<group>"; };
+		A26442831D2E580D00DBE309 /* SJChooseCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJChooseCityViewController.h; sourceTree = "<group>"; };
+		A26442841D2E580D00DBE309 /* SJChooseCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJChooseCityViewController.m; sourceTree = "<group>"; };
+		A26442861D2EAAC400DBE309 /* CityHeadCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityHeadCollectionReusableView.h; path = ../CityHeadCollectionReusableView.h; sourceTree = "<group>"; };
+		A26442871D2EAAC400DBE309 /* CityHeadCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityHeadCollectionReusableView.m; path = ../CityHeadCollectionReusableView.m; sourceTree = "<group>"; };
 		A2E68CEE1D2D501100171E38 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		A2E68CEF1D2D501100171E38 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -188,8 +203,11 @@
 		A22F49D41D2DDFA200D15B67 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A26442821D2E578600DBE309 /* childViewController */,
 				A26442581D2DE65500DBE309 /* SJFoundStoreViewController.h */,
 				A26442591D2DE65500DBE309 /* SJFoundStoreViewController.m */,
+				A26442831D2E580D00DBE309 /* SJChooseCityViewController.h */,
+				A26442841D2E580D00DBE309 /* SJChooseCityViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +222,7 @@
 		A22F49D61D2DDFA200D15B67 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A26442891D2F307900DBE309 /* ChooseCity */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,6 +303,7 @@
 		A25DC8651D2CCD76003521D7 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A264427D1D2E452500DBE309 /* Basic */,
 				A25DC86C1D2CCD76003521D7 /* Tool(业务工具类) */,
 				A22F49C71D2DDFA200D15B67 /* Enter(进入界面) */,
 				A22F49D31D2DDFA200D15B67 /* FoundStore(探店) */,
@@ -395,6 +415,43 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A264427D1D2E452500DBE309 /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				A264427E1D2E452500DBE309 /* Controller */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		A264427E1D2E452500DBE309 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A264427F1D2E456200DBE309 /* SJBasicViewController.h */,
+				A26442801D2E456200DBE309 /* SJBasicViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A26442821D2E578600DBE309 /* childViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A26442771D2E1F6E00DBE309 /* BeautySkyViewController.h */,
+				A26442781D2E1F6E00DBE309 /* BeautySkyViewController.m */,
+				A264427A1D2E1FC000DBE309 /* BeautyEditViewController.h */,
+				A264427B1D2E1FC000DBE309 /* BeautyEditViewController.m */,
+			);
+			path = childViewController;
+			sourceTree = "<group>";
+		};
+		A26442891D2F307900DBE309 /* ChooseCity */ = {
+			isa = PBXGroup;
+			children = (
+				A26442861D2EAAC400DBE309 /* CityHeadCollectionReusableView.h */,
+				A26442871D2EAAC400DBE309 /* CityHeadCollectionReusableView.m */,
+			);
+			path = ChooseCity;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -470,8 +527,11 @@
 				A22F49E61D2DDFD400D15B67 /* SJEnterViewController.m in Sources */,
 				A2E68CF01D2D501100171E38 /* UIView+Frame.m in Sources */,
 				A26442601D2DE6AC00DBE309 /* SJClassifViewController.m in Sources */,
+				A26442791D2E1F6E00DBE309 /* BeautySkyViewController.m in Sources */,
 				A25DC8521D2CC8A2003521D7 /* AppDelegate.m in Sources */,
+				A26442811D2E456200DBE309 /* SJBasicViewController.m in Sources */,
 				A26442571D2DE52A00DBE309 /* SJNavigationController.m in Sources */,
+				A26442881D2EAAC400DBE309 /* CityHeadCollectionReusableView.m in Sources */,
 				A264425D1D2DE67F00DBE309 /* SJExperienceViewController.m in Sources */,
 				A25DC84F1D2CC8A2003521D7 /* main.m in Sources */,
 				A26442541D2DE4C700DBE309 /* MainTabBarController.m in Sources */,
@@ -480,6 +540,8 @@
 				A26442731D2DF47D00DBE309 /* UIImage+Image.m in Sources */,
 				A26442761D2DFA9700DBE309 /* SJCenterTitleBtn.m in Sources */,
 				A26442701D2DF01E00DBE309 /* SJMineViewController.m in Sources */,
+				A264427C1D2E1FC000DBE309 /* BeautyEditViewController.m in Sources */,
+				A26442851D2E580D00DBE309 /* SJChooseCityViewController.m in Sources */,
 				A264426A1D2DE86C00DBE309 /* SJWriteViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
