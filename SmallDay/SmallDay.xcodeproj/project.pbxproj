@@ -28,6 +28,8 @@
 		A26442811D2E456200DBE309 /* SJBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A26442801D2E456200DBE309 /* SJBasicViewController.m */; };
 		A26442851D2E580D00DBE309 /* SJChooseCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A26442841D2E580D00DBE309 /* SJChooseCityViewController.m */; };
 		A26442881D2EAAC400DBE309 /* CityHeadCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A26442871D2EAAC400DBE309 /* CityHeadCollectionReusableView.m */; };
+		A264428C1D2F71FA00DBE309 /* SJChooseCityCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A264428B1D2F71FA00DBE309 /* SJChooseCityCollectionViewCell.m */; };
+		A264428F1D2F78BF00DBE309 /* CityFootCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A264428E1D2F78BF00DBE309 /* CityFootCollectionReusableView.m */; };
 		A2E68CF01D2D501100171E38 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E68CEF1D2D501100171E38 /* UIView+Frame.m */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +76,10 @@
 		A26442841D2E580D00DBE309 /* SJChooseCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJChooseCityViewController.m; sourceTree = "<group>"; };
 		A26442861D2EAAC400DBE309 /* CityHeadCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CityHeadCollectionReusableView.h; path = ../CityHeadCollectionReusableView.h; sourceTree = "<group>"; };
 		A26442871D2EAAC400DBE309 /* CityHeadCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CityHeadCollectionReusableView.m; path = ../CityHeadCollectionReusableView.m; sourceTree = "<group>"; };
+		A264428A1D2F71FA00DBE309 /* SJChooseCityCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SJChooseCityCollectionViewCell.h; sourceTree = "<group>"; };
+		A264428B1D2F71FA00DBE309 /* SJChooseCityCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SJChooseCityCollectionViewCell.m; sourceTree = "<group>"; };
+		A264428D1D2F78BF00DBE309 /* CityFootCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityFootCollectionReusableView.h; sourceTree = "<group>"; };
+		A264428E1D2F78BF00DBE309 /* CityFootCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityFootCollectionReusableView.m; sourceTree = "<group>"; };
 		A2E68CEE1D2D501100171E38 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		A2E68CEF1D2D501100171E38 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -448,6 +454,10 @@
 			children = (
 				A26442861D2EAAC400DBE309 /* CityHeadCollectionReusableView.h */,
 				A26442871D2EAAC400DBE309 /* CityHeadCollectionReusableView.m */,
+				A264428D1D2F78BF00DBE309 /* CityFootCollectionReusableView.h */,
+				A264428E1D2F78BF00DBE309 /* CityFootCollectionReusableView.m */,
+				A264428A1D2F71FA00DBE309 /* SJChooseCityCollectionViewCell.h */,
+				A264428B1D2F71FA00DBE309 /* SJChooseCityCollectionViewCell.m */,
 			);
 			path = ChooseCity;
 			sourceTree = "<group>";
@@ -536,6 +546,8 @@
 				A25DC84F1D2CC8A2003521D7 /* main.m in Sources */,
 				A26442541D2DE4C700DBE309 /* MainTabBarController.m in Sources */,
 				A22F49EF1D2DE27800D15B67 /* SJEnterButton.m in Sources */,
+				A264428C1D2F71FA00DBE309 /* SJChooseCityCollectionViewCell.m in Sources */,
+				A264428F1D2F78BF00DBE309 /* CityFootCollectionReusableView.m in Sources */,
 				A264425A1D2DE65500DBE309 /* SJFoundStoreViewController.m in Sources */,
 				A26442731D2DF47D00DBE309 /* UIImage+Image.m in Sources */,
 				A26442761D2DFA9700DBE309 /* SJCenterTitleBtn.m in Sources */,

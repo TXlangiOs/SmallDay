@@ -84,7 +84,7 @@
 #pragma mark - 点击左边按钮
 - (void)nearClick {
    
-    
+    NSLog(@"点击了附近");
     
 }
 

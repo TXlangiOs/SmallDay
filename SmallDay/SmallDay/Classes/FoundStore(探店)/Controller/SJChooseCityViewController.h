@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface SJChooseCityViewController : UICollectionViewController
-
+/**key*/
+@property(nonatomic,strong)NSString *SD_Current_SelectedCity;
 @end

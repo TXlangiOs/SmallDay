@@ -8,6 +8,8 @@
 
 #import "SJChooseCityViewController.h"
 #import "CityHeadCollectionReusableView.h"
+#import "CityFootCollectionReusableView.h"
+#import "SJChooseCityCollectionViewCell.h"
 @interface SJChooseCityViewController ()
 
 
@@ -16,6 +18,9 @@
 
 /**底部标题*/
 @property(nonatomic,strong)NSArray *overseasCitys;
+
+/**属性*/
+@property(nonatomic,weak)SJChooseCityCollectionViewCell *selectCell;
 
 
 @end
@@ -28,7 +33,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (NSArray *)domesticCitys {
     
     if (_domesticCitys == nil) {
-        _domesticCitys = @[@"北京",@"上海", @"成都", @"广州", @"杭州", @"西安", @"重庆", @"厦门", @"台北"];
+        _domesticCitys = @[@"北京",@"上海", @"成都", @"广州", @"杭州", @"西安", @"重庆",@"厦门", @"台北",];
         
     }
     
@@ -43,6 +48,15 @@ static NSString * const reuseIdentifier = @"Cell";
     return _overseasCitys;
 }
 
+- (NSString *)SD_Current_SelectedCity {
+    
+    if (_SD_Current_SelectedCity == nil) {
+        
+       _SD_Current_SelectedCity = @"SD_Current_SelectedCity";
+    }
+    
+    return _SD_Current_SelectedCity;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -58,12 +72,13 @@ static NSString * const reuseIdentifier = @"Cell";
     
 }
 
-// 注册
+#pragma mark - 注册
 - (void)registerContent {
     
-    
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[SJChooseCityCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     [self.collectionView registerClass:[CityHeadCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"headV"];
+    
+    [self.collectionView registerClass:[CityFootCollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footV"];
     
 }
 
@@ -100,7 +115,6 @@ static NSString * const reuseIdentifier = @"Cell";
         layout.minimumInteritemSpacing = 1;
         //每个headView的大小
         layout.headerReferenceSize = CGSizeMake(SJscreenW, 60);
-
         layout;
     });
     
@@ -109,7 +123,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 
-#pragma mark <UICollectionViewDataSource>
+#pragma mark UICollectionViewDataSource数据源
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
 
     return 2;
@@ -124,15 +138,30 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    SJChooseCityCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    cell.backgroundColor = [UIColor whiteColor];
     
-    cell.backgroundColor = [UIColor colorWithRed:arc4random_uniform(255)/255.0 green:arc4random_uniform(255)/255.0 blue:arc4random_uniform(255)/255.0 alpha:1];
+    if (indexPath.section == 0) {
+        
+        cell.cityname = _domesticCitys[indexPath.item];
+        return cell;
+    }
+    cell.cityname = _overseasCitys[indexPath.item];
     
     return cell;
 }
 
-#pragma mark <UICollectionViewDelegate>
+
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([kind isEqualToString:UICollectionElementKindSectionFooter] && indexPath.section == 1) {
+    CityFootCollectionReusableView *footV = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footV" forIndexPath:indexPath];
+       
+        footV.titleContent = @"更多城市,敬请期待...";
+        return footV;
+    }
+    
+    
     
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         
@@ -150,35 +179,48 @@ static NSString * const reuseIdentifier = @"Cell";
     }
 }
 
-
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    
+    if (section == 0) {
+        return CGSizeZero;
+    }
+    return CGSizeMake(SJscreenW, 60);
+    
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
+
+#pragma mark <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+
+    /*
+    // 取出当前cell
+    SJChooseCityCollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
+    NSUserDefaults *user = [NSUserDefaults standardUserDefaults];
+    [user setObject:cell.cityname forKey:self.SD_Current_SelectedCity];
+    
+    [user synchronize];
+    [[NSNotificationCenter defaultCenter] postNotificationName:self.SD_Current_SelectedCity object:cell.cityname];    */
+    
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+ 
+    
+    
 }
 
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
+
+
+//- (void)selectItem:(SJChooseCityCollectionViewCell *)cell {
+//    
+//    _selectCell.textcolor = [UIColor blackColor];
+//    cell.textcolor = [UIColor redColor];
+//    _selectCell = cell;
+//    
+//    
+//}
+
+
+
+
 
 @end
